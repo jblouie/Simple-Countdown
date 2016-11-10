@@ -1,0 +1,80 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MergeRootFrame"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:gravity="center_horizontal"
+    android:background="@drawable/gradient">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".6">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textSize="80sp"
+            android:textColor="#000000"
+            android:text="00"
+            android:id="@+id/editText"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/textView"
+            android:layout_toStartOf="@+id/textView"
+            android:background="transparent"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textSize="80sp"
+            android:textColor="#000000"
+            android:text=":"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:id="@+id/textView" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textSize="80sp"
+            android:textColor="#000000"
+            android:text="00"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_toEndOf="@+id/textView"
+            android:background="transparent"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".4">
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:onClick="clickStartStop"
+            android:text="Start/Stop"
+            android:background="#000000"
+            android:textColor="#ffffff"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/resetButton"
+            android:layout_alignStart="@+id/resetButton" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:onClick="clickReset"
+            android:text="Reset"
+            android:background="#000000"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>
