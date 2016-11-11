@@ -7,68 +7,79 @@
     android:orientation="vertical"
     android:weightSum="1"
     android:gravity="center_horizontal"
-    android:background="@drawable/gradient">
-
-    <TextView
-        android:id="@+id/timeText"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:text="00:00"
-        android:textSize="80sp"
-        android:layout_weight=".5"
-        android:layout_gravity="center"
-        android:gravity="center_vertical|center_horizontal"
-        android:singleLine="true"
-        android:textColor="FFFFFF" />
+    android:background="@drawable/gradient"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight=".15"
-        android:orientation="horizontal">
+        android:layout_weight=".6">
 
-        <Button
-            android:id="@+id/plusButton"
-            style="?android:attr/buttonStyleSmall"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="clickPlus"
-            android:text="+"
-            android:background="#000000"
-            android:textColor="#ffffff"
-            android:layout_marginLeft="48dp"
-            android:layout_marginStart="48dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/minutes"
+            android:id="@+id/textView2"
+            android:layout_alignTop="@+id/textView3"
+            android:layout_toLeftOf="@+id/textView"
+            android:layout_toStartOf="@+id/textView" />
 
-        <Button
-            android:id="@+id/minusButton"
-            style="?android:attr/buttonStyleSmall"
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="clickMinus"
-            android:text="-"
-            android:layout_marginRight="52dp"
-            android:background="#000000"
-            android:textColor="#ffffff"
-            android:layout_marginEnd="52dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:textSize="80sp"
+            android:textColor="#000000"
+            android:text="@string/double_zero"
+            android:id="@+id/minutesText"
+            android:inputType="number"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/textView"
+            android:layout_toStartOf="@+id/textView" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="80sp"
+            android:textColor="#000000"
+            android:text="@string/colon"
+            android:gravity="center_vertical"
+            android:id="@+id/textView"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="80sp"
+            android:textColor="#000000"
+            android:text="@string/double_zero"
+            android:id="@+id/secondsText"
+            android:inputType="number"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_toEndOf="@+id/textView" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/seconds"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/secondsText"
+            android:layout_alignLeft="@+id/secondsText"
+            android:layout_alignStart="@+id/secondsText" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight=".25">
+        android:layout_weight=".4">
         <Button
             android:id="@+id/startButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:onClick="clickStartStop"
-            android:text="Start/Stop"
+            android:text="@string/start_stop"
             android:background="#000000"
             android:textColor="#ffffff"
             android:layout_alignParentTop="true"
@@ -80,10 +91,10 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:onClick="clickReset"
-            android:text="Reset"
+            android:text="@string/reset"
             android:background="#000000"
             android:textColor="#ffffff"
-            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
